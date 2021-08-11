@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hoşgeldiniz..</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <form action="/" method="post">
+        <br />
+        <label>UserName :</label>
+        <input style="margin-left: 50px" type="text" name="username" value="" /> <br />
+        <label> <text>Password   :</text> </label>
+        <input style="margin-left: 58px" type="text" name="password" value="" /> <br />
+        <button style="margin-left: 138px" onclick="enter()">Login</button>
+
+    </form>
+
+    <br/>
+    <br/>
+    @if (ViewBag.success !=null)
+    {
+    <span>
+        @if(ViewBag.success == true){
+        @("Tebrikler Giriş işleminiz başarılı")
+        }
+        else
+        {
+        @("Kullanıcı adı veya paralo yanlış,tekrar deneyin..")
+        }
+    </span>
+    }
+
+</div>
+
